@@ -1,0 +1,41 @@
+{{#if styles}}
+import './{{pascalCase name}}.{{styles}}';
+
+{{/if}}
+{{#if typescript}}
+import React from 'react';
+
+interface {{pascalCase name}}Props {
+
+}
+
+function {{pascalCase name}}(props: {{pascalCase name}}Props) {
+    return (
+        <div>{{name}}</div>
+    );
+}
+
+export {
+    {{pascalCase name}},
+    {{pascalCase name}}Props,
+};
+{{else}}
+import PropTypes from 'prop-types';
+import React from 'react';
+
+const {{pascalCase name}} = (props) => {
+    return (
+        <div>{{name}}</div>
+    );
+}
+
+{{pascalCase name}}.propTypes = {
+    className: PropTypes.string,
+};
+
+{{pascalCase name}}.defaultProps = {
+    className: '',
+};
+
+export default {{pascalCase name}};
+{{/if}}

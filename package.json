@@ -1,0 +1,20 @@
+{
+    "name": "scaffold-react-component",
+    "version": "0.1.8",
+    "description": "scripts for publishing components",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "plop": "plop"
+    },
+    "bin": {
+        "scaffold-component": "./index.js"
+    },
+    "author": "areisle",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^3.0.0",
+        "lodash.has": "^4.5.2",
+        "node-plop": "^0.23.0"
+    }
+}

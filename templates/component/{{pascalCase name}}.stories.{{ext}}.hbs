@@ -1,0 +1,20 @@
+import React from 'react';
+
+{{#if typescript}}
+import { {{pascalCase name}}, {{pascalCase name}}Props } from '.';
+{{else}}
+import { {{pascalCase name}} } from '.';
+{{/if}}
+
+export default {
+    component: {{pascalCase name}},
+    title: '{{pascalCase type}}/{{pascalCase name}}',
+};
+
+{{#if typescript}}
+export const Example = (props: {{pascalCase name}}Props) => (
+{{else}}
+export const Example = (props) => (
+{{/if}}
+    <{{pascalCase name}} {...props} />
+);
